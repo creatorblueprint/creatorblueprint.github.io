@@ -1,0 +1,174 @@
+* {
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+body {
+  margin: 0;
+  background: #ffffff;
+  color: #000000;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  padding: 24px;
+}
+
+.container {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 28px 22px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.06);
+}
+
+.container {
+  max-width: 720px;
+  width: 100%;
+  position: relative;
+}
+
+.image-box {
+  width: 100%;
+  height: 220px;
+  border-radius: 16px;
+  background: #f2f6f9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #999;
+  font-size: 14px;
+  margin-bottom: 16px;
+}
+
+.image-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 16px;
+}
+
+.price {
+  display: inline-block;
+  align-self: flex-end;
+  
+  font-size: 16px;
+  font-weight: 600;
+  
+  color: #0B5FFF;
+  background: #EAF6FF;
+  
+  padding: 6px 12px;
+  border-radius: 999px;
+  
+  margin-bottom: 18px;
+  
+  box-shadow: inset 0 0 0 1px #CFEAFF;
+}
+
+h1 {
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1.25;
+  margin-bottom: 18px;
+  letter-spacing: -0.4px;
+}
+
+.micro {
+  font-size: 14px;
+  color: #666;
+  margin-top: 8px;
+  margin-bottom: 50px;
+}
+
+ul {
+  padding-left: 18px;
+  margin-bottom: 30px;
+}
+
+ul li {
+  margin-bottom: 10px;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+/* CTA wrapper controls layout */
+.cta-wrapper {
+  display: flex;
+  justify-content: center;
+  margin: 32px 0 18px;
+}
+
+/* Premium CTA button */
+.cta-btn {
+  background: linear-gradient(135deg, #7ff3ff, #60e9f9);
+  color: #000;
+  font-weight: 700;
+  font-size: 16px;
+  padding: 14px 28px;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+  
+  box-shadow:
+    0 10px 25px rgba(96, 233, 249, 0.45),
+    inset 0 1px 0 rgba(255, 255, 255, 0.6);
+  
+  transition: box-shadow 0.25s ease, transform 0.15s ease;
+}
+
+.cta-btn:hover {
+  box-shadow:
+    0 14px 35px rgba(96, 233, 249, 0.75),
+    inset 0 1px 0 rgba(255, 255, 255, 0.7);
+}
+
+.cta-btn:active {
+  transform: scale(0.98);
+}
+
+/* GLOW LAYER */
+/* CTA wrapper controls layout */
+.cta-wrapper {
+  display: flex;
+  justify-content: center;
+  margin: 28px 0 10px;
+}
+
+/* Premium CTA button */
+.cta-btn {
+  background: linear-gradient(135deg, #7ff3ff, #60e9f9);
+  color: #000;
+  font-weight: 700;
+  font-size: 16px;
+  padding: 14px 28px;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+  
+  /* glow */
+  box-shadow:
+    0 10px 25px rgba(96, 233, 249, 0.45),
+    inset 0 1px 0 rgba(255, 255, 255, 0.6);
+  
+  transition: box-shadow 0.25s ease, transform 0.15s ease;
+}
+
+/* Hover glow (no jump, no pop) */
+.cta-btn:hover {
+  box-shadow:
+    0 14px 35px rgba(96, 233, 249, 0.75),
+    inset 0 1px 0 rgba(255, 255, 255, 0.7);
+}
+
+/* Click feel without shifting layout */
+.cta-btn:active {
+  transform: scale(0.98);
+}
+
+/* Fix broken mobile layout */
+@media (max-width: 768px) {
+  .bg-accent,
+  .side-accent,
+  .right-pill {
+    display: none !important;
+  }
+}
