@@ -7,6 +7,12 @@ if (!payBtn) {
 
 // Run this when user clicks "Get the Blueprint"
 payBtn.addEventListener("click", async () => {
+  if (typeof gtag === "function") {
+  gtag('event', 'buy_click', {
+    event_category: 'engagement',
+    event_label: 'Get the Blueprint'
+  });
+}
   
   // UI feedback so user knows something is happening
   payBtn.innerText = "Processing...";
