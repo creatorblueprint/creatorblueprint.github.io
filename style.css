@@ -1,0 +1,226 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+body
+    {
+  padding-bottom: 120px;
+  background: #f7f9fc;
+  color: #0f172a;
+  line-height: 1.6;
+}
+
+/* wrapper = no background, no padding */
+.hero-img-wrap {
+  margin-bottom: 16px;
+}
+
+/* actual image */
+.hero-img {
+  width: 100%;
+  max-width: 360px;        /* controls width on larger screens */
+  max-height: 260px;       /* THIS is the key */
+  height: auto;
+
+  object-fit: cover;
+  border-radius: 24px;
+
+  display: block;
+  margin: 0 auto 18px;     /* centers + spacing below */
+}
+
+.hero {
+  margin-top: 24px;     /* space from top */
+  text-align: center;
+}
+
+/* Small text above image */
+.hero-eyebrow {
+  font-size: 14px;
+  font-weight: 500;
+  color: #5DA9FF;
+  margin-bottom: 12px;
+  opacity: 0.9;
+}
+
+.price-badge::before {
+  content: "•";
+  margin-right: 4px;
+  opacity: 0.4;
+}
+
+.price-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+
+  background: rgba(23, 172, 255, 0.08); /* very light */
+  border: 1px solid rgba(23, 172, 255, 0.35);
+
+  color: #145B84;
+  font-weight: 600;
+  font-size: 14px;
+
+  padding: 6px 14px;
+  border-radius: 10px; /* NOT pill */
+
+  cursor: default; /* important */
+}
+
+.price-label {
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  opacity: 0.7;
+}
+
+  .cta-group {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;            /* 👈 distance BETWEEN ₹8 and button */
+  margin: 20px 0 14px; /* space around the whole group */
+}
+ 
+.hero h1 {
+  font-size: 1.8rem;
+  margin-bottom: 18px;
+}
+
+.subtitle {
+  color: #475569;
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+
+/* BUTTON */
+.primary-btn {
+  padding: 14px 26px;
+  font-size: 16px;
+  font-weight: 600;
+  
+  background: linear-gradient(135deg, #17ACFF, #4FD1FF);
+  color: white;
+  
+  border-radius: 999px;
+  border: none;
+  
+  box-shadow: 0 10px 25px rgba(23, 172, 255, 0.35);
+}
+
+.primary-btn:active {
+  transform: scale(0.98);
+}
+
+.primary-btn:hover {
+  box-shadow: 0 14px 30px rgba(23, 172, 255, 0.45);
+}
+
+.trust-text {
+  font-size: 0.85rem;
+  color: #64748b;
+  margin-top: 10px;
+}
+
+/* SECTIONS */
+.section {
+  padding: 28px 20px;
+}
+
+.section h2 {
+  font-size: 1.4rem;
+  margin-bottom: 14px;
+}
+
+.highlight {
+  background: #ffffff;
+  border-radius: 20px;
+  margin: 0 12px;
+}
+
+/* LISTS */
+.feature-list {
+  list-style: none;
+}
+
+.feature-list li {
+  margin-bottom: 10px;
+  padding-left: 24px;
+  position: relative;
+}
+
+.feature-list li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: #0ea5e9;
+  font-weight: bold;
+}
+
+/* FOOTER */
+.footer {
+  padding: 28px 20px 10px;
+  text-align: center;
+}
+
+.primary-btn {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Shine layer */
+.primary-btn::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -120%;
+  width: 60%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255,255,255,0.65),
+    transparent
+  );
+  transform: skewX(-20deg);
+}
+
+/* When shine is active */
+.primary-btn.shine::after {
+  animation: shineMove 1s ease-in-out;
+}
+
+@keyframes shineMove {
+  from {
+    left: -120%;
+  }
+  to {
+    left: 140%;
+  }
+}
+
+/* Fade-in animation */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Apply fade to main elements */
+.fade-in {
+  opacity: 0;
+  animation: fadeUp 0.8s ease-out forwards;
+}
+
+/* Staggered delays */
+.fade-delay-1 { animation-delay: 0.1s; }
+.fade-delay-2 { animation-delay: 0.25s; }
+.fade-delay-3 { animation-delay: 0.4s; }
+.fade-delay-4 { animation-delay: 0.55s; }
