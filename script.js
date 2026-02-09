@@ -11,6 +11,11 @@ payBtn.addEventListener("click", async () => {
   // UI feedback so user knows something is happening
   payBtn.innerText = "Processing...";
   payBtn.disabled = true;
+
+  gtag('event', 'buy_click', {
+  event_category: 'engagement',
+  event_label: 'Get the Blueprint'
+});
   
   try {
     /*
